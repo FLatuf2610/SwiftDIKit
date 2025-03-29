@@ -148,12 +148,14 @@ let optionalDependency: SomeService? = resolveOptional()
 
 - `static func startSwiftDIKit(modules: [Module])`: Starts the dependency injection framework by registering the provided modules.
 - `static func resolve<T>() -> T`: Resolves and returns a dependency of the specified type.
+- `static func resolveOptional<T>() -> T?`: Resolves and returns an optional dependency of the specified type.
 - `static func restartSwiftDIKit()`: Resets all registered dependencies.
 - `static func swiftDIKitModule(dependencies: @escaping (DependencyInjector) -> Void) -> Module`: Defines a module and registers its dependencies.
 
 ## `DependencyInjector`
 
 - `public func singleton<T>(type: T.Type = T.self, factory: @escaping () -> T)`: Registers a singleton dependency.
+- `public func singletonInstance<T>(type: T.Type = T.self, instance: T)`: Registers a singleton dependency.
 - `public func factory<T>(type: T.Type = T.self, factory: @escaping () -> T)`: Registers a factory dependency.
 - `public func get<T>() -> T`: Resolves and returns a dependency of the specified type.
 - `public func getOptional<T>() -> T?` Resolves and returns an optional dependency of the specified type.
@@ -169,7 +171,7 @@ let optionalDependency: SomeService? = resolveOptional()
 To run the tests for **SwiftDIKit**, clone the repository and run the tests using Xcode:
 
 ```bash
-git clone https://github.com/FLatuf2610/SwiftDIKitFramework.git
+git clone https://github.com/FLatuf2610/SwiftDIKit.git
 cd SwiftDIKit
 open SwiftDIKit.xcodeproj
 ```
