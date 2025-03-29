@@ -17,7 +17,7 @@ You can install **SwiftDIKit** via [Swift Package Manager](https://swift.org/pac
 
 1. Open your project in Xcode.
 2. Navigate to **File > Swift Packages > Add Package Dependency**.
-3. Enter the repository URL: `https://github.com/FLatuf2610/SwiftDIKitFramework.git`
+3. Enter the repository URL: `https://github.com/FLatuf2610/SwiftDIKit`
 4. Choose the version or branch you'd like to integrate.
 
 # Usage
