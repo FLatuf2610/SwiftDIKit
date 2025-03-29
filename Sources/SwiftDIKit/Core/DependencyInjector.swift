@@ -27,6 +27,17 @@ public class DependencyInjector {
         }
     }
     
+    /// Registers a singleton instance of the specified type.
+    /// - Parameters:
+    ///   - type: The type to register.
+    ///   - instance: The instance to register.
+    public func singletonInstance<T>(type: T.Type = T.self, instance: T) {
+        let key = ObjectIdentifier(type)
+        if self.singletones[key] == nil {
+            self.singletones[key] = instance
+        }
+    }
+    
     /// Registers a factory function for the specified type.
     /// - Parameters:
     ///   - type: The type to register.
