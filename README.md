@@ -113,7 +113,7 @@ You can register dependencies either as **singletons** (a single shared instance
 ```swift
 // Inside a module
 di.singleton(type: SomeService.self) {
-    return SomeServiceImplementation()
+    SomeServiceImplementation()
 }
 ```
 
@@ -122,7 +122,7 @@ di.singleton(type: SomeService.self) {
 ```swift
 // Inside a module
 di.factory(type: SomeService.self) {
-    return SomeServiceImplementation()
+    SomeServiceImplementation()
 }
 ```
 
